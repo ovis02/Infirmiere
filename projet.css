@@ -1,4 +1,4 @@
-/* Réinitialisation des styles de base et styles généraux */
+/* base */
 body,
 ul,
 li {
@@ -36,21 +36,114 @@ li {
 .titre-nav {
   padding: 5px;
   font-size: 20px;
-  font-family: "Bruno Ace SC", sans-serif; /*remplace kameron*/
-  color: #000; /* Police noire */
+  font-family: "Kameron", serif; /* kameron*/
+  color: black;
   text-align: center;
   text-decoration: none; /* Supprime les soulignements des liens */
 }
 
 /* Style pour le cercle de la photo de profil*/
-.circle-container {
+.cercle-container {
   position: absolute;
   top: 230px; /* Empiéte de 70px au centre */
   left: calc(50% - 100px); /* Calcul pour centrer horizontalement */
 }
 
-.circle-image {
+/*Taille de cercle*/
+.cercle-image {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+}
+
+/*Fond d'ecran de la section*/
+.presentation-section {
+  background-image: url("wallpaper.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Contenu du texte principale*/
+.presentation-content {
+  margin: 80px;
+  text-align: center;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 32px;
+  font-family: "Merriweather", serif;
+  margin: 0;
+}
+
+.titre-bleu {
+  font-size: 24px;
+  font-family: "Merriweather", serif;
+  color: #0cb1f1;
+  margin: 0;
+  padding-top: 20px;
+}
+
+p {
+  font-size: 18px;
+  font-family: "Merriweather", serif;
+  margin: 10px 0;
+  padding-top: 20px;
+}
+
+/* CSS pour la mise en page */
+
+.informations-section {
+  background-color: #87ceeb; /* Couleur bleu ciel pour le fond */
+  width: 100%;
+  height: 382px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  list-style: none; /* Supprime les puces de liste */
+}
+
+.langue-paiement {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: center;
+}
+
+.langues-container,
+.moyens-paiement {
+  display: flex;
+  flex-direction: column; /* Met les éléments en colonne */
+  padding: 10px;
+}
+
+.langues,
+.moyens {
+  display: flex; /* Utilisation de Flexbox pour aligner les éléments horizontalement */
+  flex-direction: row; /* Par défaut, mais vous pouvez l'ajouter pour plus de clarté */
+  flex-flow: row;
+  padding: 10px;
+}
+
+.language,
+.paiement {
+  margin-right: 20px; /* Ajoute de l'espace entre les éléments (drapeau + texte) */
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: column; /* Met les éléments en colonne */
+  padding: 10px;
+}
+
+.contact-rectangle {
+  width: 400px;
+  height: 70px;
+  background-color: #fff; /* Fond blanc pour les rectangles de contact */
+  margin-bottom: 10px; /* Ajoute un espace entre les rectangles */
 }
