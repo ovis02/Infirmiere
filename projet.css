@@ -59,7 +59,7 @@ li {
 /*Fond d'ecran de la section*/
 .presentation-section {
   background-image: url("wallpaper.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   width: 100%;
   height: 720px;
   display: flex;
@@ -142,8 +142,47 @@ p {
 }
 
 .contact-rectangle {
-  width: 400px;
-  height: 70px;
-  background-color: #fff; /* Fond blanc pour les rectangles de contact */
-  margin-bottom: 10px; /* Ajoute un espace entre les rectangles */
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding-right: 10px; /* Espace à droite pour la ligne de délimitation */
+  border: 2px solid black; /* Ligne de délimitation */
+  border-radius: 5px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre au bas */
+}
+
+.contact-rectangle img {
+  margin-right: 20px; /* Espace entre le logo et le texte */
+  margin-left: 10px;
+}
+
+.contact-info a {
+  display: block; /* Pour que le lien prenne toute la largeur disponible */
+  margin-top: 5px; /* Espace en haut du lien */
+  margin-bottom: 5px; /* Espace en bas du lien */
+  text-decoration: none; /* Supprime le soulignement */
+  color: inherit; /* Utilise la couleur du texte parent */
+  cursor: pointer;
+}
+
+.contact-title {
+  color: gray; /* Couleur gris foncé */
+  margin-top: 5px; /* Espace en haut du titre */
+  font-size: 16px; /* Taille de la police du titre */
+}
+
+/*rendez-vous informations*/
+
+.rendez-vous {
+  margin-top: 150px; /* Ajoute une marge supérieure de 150 pixels */
+  margin-left: 20px;
+}
+
+.text-metro {
+  margin-bottom: 20px;
+}
+
+.p1 {
+  line-height: 1px; /*reduit l'espace entre les lignes*/
 }
