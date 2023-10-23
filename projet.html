@@ -33,6 +33,16 @@
         <div class="titre-nav-container">
           <a class="titre-nav" href="#Prendre">Prendre<br />rendez-vous</a>
         </div>
+        <div class="burger-container">
+          <img
+            id="logo-burger"
+            src="logoBurger.png"
+            alt="logo-burger"
+            height="100px"
+            width="80px"
+            class="logo-burger"
+          />
+        </div>
         <div class="cercle-container">
           <img
             id="À propos"
@@ -43,7 +53,12 @@
         </div>
       </nav>
 
-      <img src="FondEcranNav.png" height="300px" width="100%" />
+      <img
+        class="fond-ecran"
+        src="FondEcranNav.png"
+        height="300px"
+        width="100%"
+      />
     </header>
     <main>
       <section class="presentation-section">
@@ -314,7 +329,7 @@
 
     <footer
       class="footer-bleu text-dark"
-      style="height: 390px; position: relative"
+      style="height: 800px; position: relative"
     >
       <div class="container h-100">
         <div class="row h-100 align-items-center">
@@ -322,16 +337,28 @@
             <div class="row">
               <div class="col-md-6">
                 <div class="d-flex">
-                  <img src="logo.png" alt="Logo" width="500" height="350" />
+                  <img
+                    class="logo-footer"
+                    src="logo.png"
+                    alt="Logo"
+                    width="500"
+                    height="350"
+                  />
                 </div>
               </div>
+
               <div class="col-md-6 text-right mt-5">
-                <p>Cabinet Infirmier Sahila Azam</p>
+                <p><b>Cabinet Infirmier Sahila Azam</b></p>
                 <p>Ouvert du mardi au samedi de 9h à 18h00</p>
-                <p>
-                  <img src="map.png" alt="Adresse" width="20" height="20" />66
-                  rue Henri Brabusse
+
+                <p class="logo-adresse">
+                  <img src="map.png" alt="Adresse" width="20" height="20" />
+                  66 rue Henri Brabusse
                 </p>
+                <div class="col-auto">
+                  <p>93200 Saint-Denis</p>
+                </div>
+
                 <a href="#" class="btn btn-primary btn-sm"
                   >Prendre rendez-vous en ligne</a
                 >
