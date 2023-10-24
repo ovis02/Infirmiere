@@ -1,6 +1,8 @@
 /* base */
-http://127.0.0.1:3000/projet.html#Prendre
-  body, ul, li {
+
+body,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -56,7 +58,14 @@ http://127.0.0.1:3000/projet.html#Prendre
   top: 180px;
   right: 0;
   margin: 10px;
-  display: none;
+  display: none; /*ne pas afficher*/
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Cercle blanc transparent à 50% */
+  border-radius: 50%; /* Pour créer le cercle */
 }
 
 /*-----------------------------------------------------------------------------*/
@@ -86,6 +95,7 @@ h1 {
   margin: 0;
 }
 
+/*Sous titre principale*/
 .titre-bleu {
   font-size: 24px;
   font-family: "Kameron", serif;
@@ -169,35 +179,43 @@ h3 {
 
 .contact-rectangle {
   display: flex;
-  align-items: center;
   background-color: #fff;
   margin-bottom: 15px;
   padding-right: 10px; /* Espace à droite pour la ligne de délimitation */
-  width: 400px;
+  width: 300px;
   border-radius: 5px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre au bas */
 }
 
-.contact-rectangle img {
-  margin-right: 20px; /* Espace entre le logo et le texte */
+.logo-rectangle {
+  display: flex;
+  align-items: center;
+  margin-right: 10px; /* Espace entre le logo et le texte */
   margin-left: 10px;
+}
+
+.contact-info {
+  flex-grow: 1; /* Pour que le contact-info occupe l'espace restant */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 2px solid black;
 }
 
 .contact-info a {
   display: block; /* Pour que le lien prenne toute la largeur disponible */
-  margin-top: 5px; /* Espace en haut du lien */
-  margin-bottom: 5px; /* Espace en bas du lien */
   text-decoration: none; /* Supprime le soulignement */
   color: inherit; /* Utilise la couleur du texte parent */
   cursor: pointer;
 }
 
-.contact-title {
-  color: gray; /* Couleur gris foncé */
-  margin-top: 5px; /* Espace en haut du titre */
-  font-size: 16px; /* Taille de la police du titre */
+/* Supprimez la bordure et les styles par défaut du bouton */
+.open-form-button {
+  border: none;
+  background: none;
+  cursor: pointer;
 }
-
+/*.............................................................................................*/
 /*rendez-vous informations*/
 
 .rendez-vous {
@@ -226,11 +244,103 @@ li {
   margin-left: -25px;
 }
 
-/*....................................................*/
+.btn-perso {
+  background-color: #0cb1f1; /* Couleur de fond du bouton footer*/
+  color: #fff;
+}
+
+/*...........................................................................................*/
+
+/* Style du formulaire de contact*/
+#contact-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(171, 224, 242); /* Couleur bleu ciel pour le fond */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Style des boutons */
+#contact-form button,
+.rendez-vous-form button {
+  background-color: #0cb1f1;
+  color: #fff;
+  border: none;
+  margin: 10px;
+  padding: 10px 50px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style des étiquettes et des champs de formulaire */
+#contact-form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.title-form {
+  color: #0cb1f1;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/*.........................................................................*/
+/*Style pour le formulaire rendez-vous*/
+
+/* Styles pour les champs de formulaire */
+.rendez-vous-form input,
+.rendez-vous-form select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  width: 100%; /* Utilisez la largeur appropriée pour vos besoins */
+  max-width: 100%; /* Nouvelle règle pour la largeur maximale */
+}
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.lightbox-content {
+  background: rgba(171, 224, 242);
+  max-width: 100%; /* Ajustez la largeur en fonction de vos besoins */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.lightbox h3 {
+  margin: 0;
+}
+
+/* Ajoutez d'autres styles CSS pour personnaliser l'apparence */
 
 /* Styles pour tablette (834 px) */
 @media (max-width: 834px) {
-  /* Masquer les titres de navigation */
+  /* Masque les titres de navigation */
   .titre-nav-container {
     display: none;
   }
@@ -242,7 +352,7 @@ li {
   /* Style pour le cercle de la photo de profil*/
   .cercle-container {
     position: absolute;
-    top: 120px; /* Empiéte de 70px au centre de l'arrière plan*/
+    top: 120px; /* Empiete au centre de l'arrière plan*/
     margin: 0 auto;
   }
 
@@ -275,6 +385,7 @@ li {
     margin: 80 px;
     text-align: center;
     display: inline-block;
+    margin: 20px;
   }
 
   /*Titre Principal*/
@@ -318,7 +429,7 @@ li {
     list-style: none; /* Supprime les puces de liste */
   }
 
-  /*titre info langues et paiement*/
+  /*titre section*/
 
   h2 {
     font-size: 20px;
@@ -330,6 +441,8 @@ li {
     align-content: center;
   }
   /*.............................................................................*/
+  /* section info langues et paiement*/
+
   .informations-section {
     height: 900px;
   }
@@ -359,11 +472,7 @@ li {
     font-size: 30px;
   }
   /*..............................................................................*/
-  .logo-footer {
-    align-content: center;
-    width: 400px;
-    height: 250px;
-  }
+
   .row.h-100 {
     height: auto; /* ajuste automatiquement le contenu */
   }
@@ -406,22 +515,13 @@ li {
     height: 120px;
   }
   /*.........................................................................*/
-  /*Fond d'ecran de la section principale*/
-  .presentation-section {
-    background-image: url("wallpaper.png");
-    background-repeat: repeat;
-    width: 100%;
-    height: 850px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   /*Titre Principal*/
   h1 {
     font-size: 18px;
     font-family: "Kameron", serif;
     margin: 0;
-    padding-top: 140px;
+    padding-top: 1px;
   }
 
   .titre-bleu {

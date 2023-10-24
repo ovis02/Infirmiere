@@ -38,7 +38,7 @@
             id="logo-burger"
             src="logoBurger.png"
             alt="logo-burger"
-            height="100px"
+            height="80px"
             width="80px"
             class="logo-burger"
           />
@@ -133,29 +133,33 @@
         </div>
         <div class="contacts-container">
           <div class="contact-rectangle">
+            <div class="logo-rectangle">
             <img
               src="telephone-portable.png"
               alt="Logo 1"
               width="46"
               height="40"
             />
+            </div>
             <div class="contact-info">
-              <h2 class="contact-title">Portable</h2>
-              <p><a href="tel:06-00-00-00-00">Appeler</a></p>
+              <p><a href="tel:06-00-00-00-00">Portable</a></p>
             </div>
           </div>
           <div class="contact-rectangle">
+          <div class="logo-rectangle">
             <img src="telephone.png" alt="Logo 1" width="46" height="40" />
+          </div>
             <div class="contact-info">
-              <h2 class="contact-title">Fixe</h2>
+            
               <p><a href="tel:01-00-00-00-00">Cabinet</a></p>
             </div>
           </div>
           <div class="contact-rectangle">
+            <div class="logo-rectangle">
             <img src="mail.png" alt="Logo 1" width="46" height="40" />
+            </div>
             <div class="contact-info">
-              <h2 class="contact-title">Email</h2>
-              <p><a href="mailto:sahila58@hotmail.fr">Contactez-moi</a></p>
+            <p><button class="open-form-button">Contactez-moi</button></p>
             </div>
           </div>
         </div>
@@ -203,7 +207,7 @@
               </div>
               <div class="row" style="height: 47.14px">
                 <div class="col-10">Mardi</div>
-                <div class="col-2">07:30 à 18:00</div>
+                <div class="col-2">09:00 à 18:00</div>
               </div>
               <div class="row" style="height: 47.14px">
                 <div
@@ -216,12 +220,12 @@
                   class="col-2"
                   style="background-color: rgba(171, 224, 242, 0.2)"
                 >
-                  10:00 à 17:00
+                  09:00 à 18:00
                 </div>
               </div>
               <div class="row" style="height: 47.14px">
                 <div class="col-10">Jeudi</div>
-                <div class="col-2">10:00 à 17:00</div>
+                <div class="col-2">09:00 à 18:00</div>
               </div>
               <div class="row" style="height: 47.14px">
                 <div
@@ -234,12 +238,12 @@
                   class="col-2"
                   style="background-color: rgba(171, 224, 242, 0.2)"
                 >
-                  07:30 à 18:00
+                  09:00 à 18:00
                 </div>
               </div>
               <div class="row" style="height: 47.14px">
                 <div class="col-10">Samedi</div>
-                <div class="col-2">07:30 à 18:00</div>
+                <div class="col-2">09:00 à 18:00</div>
               </div>
               <div class="row" style="height: 47.14px">
                 <div
@@ -277,9 +281,9 @@
             <h3>Informations pratiques</h3>
             <p class="p1">1er Etage</p>
             <p class="p1">Code 6712B</p>
-            <p class="p1">Parking au cabinet</p>
-            <p class="p1">Accès handicapé</p>
-            <p class="p1">RDC ou avec ascenceur</p>
+            <p class=><img src="parking.png" alt="Logo" width="40" height="40" />Parking au cabinet</p>
+            <p class=><img src="handicap.png" alt="Logo" width="40" height="40" />Accès handicapé</p>
+            <p class=><img src="lift.png" alt="Logo" width="40" height="40" />RDC ou avec ascenceur</p>
           </div>
         </div>
       </div>
@@ -321,7 +325,7 @@
           <div class="col-12">
             <h3 id="Prendre" class="title-40">Besoin de soin ?</h3>
             <p>Prendre rendez-vous en ligne</p>
-            <a href="#" class="btn btn-primary">Prendre rendez-vous en ligne</a>
+            <a href="#" class="btn btn-perso appointment-button">Prendre rendez-vous en ligne</a>
           </div>
         </div>
       </div>
@@ -342,12 +346,12 @@
                     src="logo.png"
                     alt="Logo"
                     width="500"
-                    height="350"
+                    height="400"
                   />
                 </div>
               </div>
 
-              <div class="col-md-6 text-right mt-5">
+              <div class="col-md-6 text-center mt-5">
                 <p><b>Cabinet Infirmier Sahila Azam</b></p>
                 <p>Ouvert du mardi au samedi de 9h à 18h00</p>
 
@@ -359,9 +363,7 @@
                   <p>93200 Saint-Denis</p>
                 </div>
 
-                <a href="#" class="btn btn-primary btn-sm"
-                  >Prendre rendez-vous en ligne</a
-                >
+                <a href="#" class="btn btn-perso appointment-button">Prendre rendez-vous en ligne</a>
               </div>
             </div>
             <p class="mb-3" style="position: absolute; bottom: 0; left: 10px">
@@ -371,12 +373,14 @@
         </div>
       </div>
     </footer>
+    
 
-    <script src="projet.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="projet.js"></script>
   </body>
 </html>
