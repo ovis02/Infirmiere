@@ -133,3 +133,25 @@ for (let jourIndex = 0; jourIndex < joursSemaine.length; jourIndex++) {
     creneauxHorairesDisponibles.push(creneau);
   }
 }
+
+//Navigation bouton burger
+
+// Sélectionnez le logo burger bouton et la barre de navigation verticale
+const logoBurgerButton = document.getElementById("logo-burger-button");
+const verticalNavbar = document.getElementById("vertical-navbar");
+
+// Créez une variable pour suivre l'état de la barre de navigation si elle est visible ou pas
+let isNavbarVisible = false;
+
+// Ajoutez un gestionnaire d'événement au logo burger bouton
+logoBurgerButton.addEventListener("click", () => {
+  // Inverse la visibilité de la barre de navigation verticale
+  if (!isNavbarVisible) {
+    verticalNavbar.style.right = "0";
+  } else {
+    verticalNavbar.style.right = "-200px";
+  }
+
+  // Mettez à jour l'état de la barre de navigation
+  isNavbarVisible = !isNavbarVisible;
+});
