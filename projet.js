@@ -1,3 +1,41 @@
+//Navigation bouton burger
+
+// Sélectionnez le logo burger bouton et la barre de navigation verticale
+const logoBurgerButton = document.getElementById("logo-burger-button");
+const verticalNavbar = document.getElementById("vertical-navbar");
+
+// Créez une variable pour suivre l'état de la barre de navigation
+let isNavbarVisible = false;
+
+// Fonction pour ouvrir la barre de navigation
+function openNavbar() {
+  verticalNavbar.style.right = "0";
+  isNavbarVisible = true;
+}
+
+// Fonction pour fermer la barre de navigation
+function closeNavbar() {
+  verticalNavbar.style.right = "-200px";
+  isNavbarVisible = false;
+}
+
+// Sélectionnez le bouton "Fermer"
+const closeButton = document.getElementById("close-button");
+
+// Ajoutez un gestionnaire d'événement au bouton "Fermer"
+closeButton.addEventListener("click", () => {
+  closeNavbar();
+});
+
+// Ajoutez un gestionnaire d'événement au logo burger bouton
+logoBurgerButton.addEventListener("click", () => {
+  if (!isNavbarVisible) {
+    openNavbar();
+  } else {
+    closeNavbar();
+  }
+});
+
 // Récupère le bouton "Contactez-moi" et le formulaire
 const openFormButton = document.querySelector(".open-form-button");
 const contactForm = document.createElement("div");
@@ -25,22 +63,21 @@ contactForm.style.display = "none";
 // Ajoute le formulaire au corps de la page
 document.body.appendChild(contactForm);
 
-// Gérez l'événement du bouton "Contactez-moi"
+// Gére l'événement du bouton "Contactez-moi"
 openFormButton.addEventListener("click", () => {
   contactForm.style.display = "block";
 });
 
-// Gérez l'événement du bouton "Fermer"
+// Gére l'événement du bouton "Fermer"
 const closeFormButton = contactForm.querySelector("#close-form-button");
 closeFormButton.addEventListener("click", () => {
   contactForm.style.display = "none";
 });
 
-// Gérez la soumission du formulaire
+// Gére la soumission du formulaire
 const form = contactForm.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  // Récupérez les données du formulaire et envoyez-les à votre serveur ici (AJAX, fetch, etc.)
 });
 
 //Systeme de rendez-vous
@@ -51,7 +88,7 @@ function afficherFormulaire() {
   const lightbox = document.createElement("div");
   lightbox.classList.add("lightbox");
 
-  // Créez le contenu du modèle lightbox
+  // Crée le contenu du modèle lightbox
   const lightboxContent = document.createElement("div");
   lightboxContent.classList.add("lightbox-content");
   lightboxContent.innerHTML = `
@@ -97,7 +134,7 @@ function afficherFormulaire() {
       fermerLightbox();
     });
 
-  // Gérez le clic sur le bouton "Fermer"
+  // Gére le clic sur le bouton "Fermer"
   lightboxContent
     .querySelector(".fermer-formulaire")
     .addEventListener("click", function () {
@@ -110,7 +147,7 @@ function afficherFormulaire() {
   }
 }
 
-// Gérez le clic sur les boutons avec la classe "appointment-button"
+// Gére le clic sur les boutons avec la classe "appointment-button"
 const appointmentButtons = document.querySelectorAll(".appointment-button");
 
 appointmentButtons.forEach((button) => {
@@ -133,25 +170,3 @@ for (let jourIndex = 0; jourIndex < joursSemaine.length; jourIndex++) {
     creneauxHorairesDisponibles.push(creneau);
   }
 }
-
-//Navigation bouton burger
-
-// Sélectionnez le logo burger bouton et la barre de navigation verticale
-const logoBurgerButton = document.getElementById("logo-burger-button");
-const verticalNavbar = document.getElementById("vertical-navbar");
-
-// Créez une variable pour suivre l'état de la barre de navigation si elle est visible ou pas
-let isNavbarVisible = false;
-
-// Ajoutez un gestionnaire d'événement au logo burger bouton
-logoBurgerButton.addEventListener("click", () => {
-  // Inverse la visibilité de la barre de navigation verticale
-  if (!isNavbarVisible) {
-    verticalNavbar.style.right = "0";
-  } else {
-    verticalNavbar.style.right = "-200px";
-  }
-
-  // Mettez à jour l'état de la barre de navigation
-  isNavbarVisible = !isNavbarVisible;
-});

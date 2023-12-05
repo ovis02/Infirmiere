@@ -41,7 +41,7 @@ li {
 /* Style pour le cercle de la photo de profil*/
 .cercle-container {
   position: absolute;
-  top: 230px; /* Empiéte de 70px au centre de l'arrière plan*/
+  top: 230px; /* Empiéte de 70px au centre de l'arrière plan de la navbar*/
   margin: 0 auto;
 }
 
@@ -163,7 +163,7 @@ p {
 /*titre info langues et paiement*/
 h2,
 h3 {
-  font: size 32px;
+  font-size: 32px;
   font-family: "Merriweather", serif;
 }
 
@@ -238,7 +238,7 @@ h3 {
   cursor: pointer;
 }
 /*.............................................................................................*/
-/*rendez-vous informations*/
+/*rendez-vous informations & footer*/
 
 .rendez-vous {
   margin-top: 150px; /* Ajoute une marge supérieure de 150 pixels */
@@ -287,8 +287,7 @@ li {
 }
 
 /* Style des boutons */
-#contact-form button,
-.rendez-vous-form button {
+#contact-form button {
   background-color: #0cb1f1;
   color: #fff;
   border: none;
@@ -347,7 +346,7 @@ li {
 
 .lightbox-content {
   background: rgba(171, 224, 242);
-  max-width: 100%; /* Ajustez la largeur en fonction de vos besoins */
+  max-width: 400px; /* Ajustez la largeur en fonction de vos besoins */
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -356,6 +355,15 @@ li {
 
 .lightbox h3 {
   margin: 0;
+}
+.rendez-vous-form button {
+  background-color: #0cb1f1;
+  color: #fff;
+  border: none;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Ajoutez d'autres styles CSS pour personnaliser l'apparence */
@@ -382,7 +390,6 @@ li {
   .cercle-image {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
   }
 
   .fond-ecran {
@@ -393,80 +400,46 @@ li {
 
   /*Fond d'ecran de la section principale*/
   .presentation-section {
-    background-image: url("wallpaper.png");
-    background-repeat: repeat;
-    width: 100%;
     height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   /*mise en page de la section principale*/
   .presentation-content {
-    margin: 80 px;
-    text-align: center;
-    display: inline-block;
     margin: 20px;
   }
 
   /*Titre Principal*/
   h1 {
     font-size: 24px;
-    font-family: "Kameron", serif;
-    margin: 0;
     padding-top: 140px;
   }
 
   .titre-bleu {
     font-size: 20px;
-    font-family: "Kameron", serif;
-    color: #0cb1f1;
-    margin: 0;
-    padding-top: 20px;
-  }
-
-  p {
-    font-size: 18 px;
-    font-family: "Merriweather", serif;
-    margin: 10px 0;
-    padding-top: 20px;
   }
   /*.............................................................................*/
   /*2eme section*/
   /* CSS pour la mise en page de la 2 ème section */
 
   .informations-section {
-    background-color: rgba(
-      171,
-      224,
-      242,
-      0.2
-    ); /* Couleur bleu ciel pour le fond */
-    width: 100%;
-    height: 700px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    list-style: none; /* Supprime les puces de liste */
+    height: auto;
   }
 
   /*titre section*/
 
   h2 {
     font-size: 20px;
-    font-family: "Merriweather", serif;
+    text-align: center;
   }
 
   h3 {
-    font-family: "Merriweather", serif;
     align-content: center;
   }
   /*.............................................................................*/
   /* section info langues et paiement*/
 
   .informations-section {
-    height: 900px;
+    height: auto;
   }
 
   .language,
@@ -481,10 +454,6 @@ li {
     align-items: center;
   }
 
-  .contact-rectangle {
-    width: 300px;
-  }
-
   .col-10,
   .col-2 {
     font-size: 10px; /* Réduire davantage la taille de la police */
@@ -493,7 +462,7 @@ li {
   .title-40 {
     font-size: 30px;
   }
-  /*..............................................................................*/
+  /*............................footer..................................................*/
 
   .row.h-100 {
     height: auto; /* ajuste automatiquement le contenu */
@@ -521,16 +490,13 @@ li {
 
   /* Style pour le cercle de la photo de profil*/
   .cercle-container {
-    position: absolute;
     top: 100px; /* Empiéte de 70px au centre de l'arrière plan*/
-    margin: 0 auto;
   }
 
   /*Taille de cercle*/
   .cercle-image {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
   }
 
   .fond-ecran {
@@ -541,24 +507,16 @@ li {
   /*Titre Principal*/
   h1 {
     font-size: 18px;
-    font-family: "Kameron", serif;
-    margin: 0;
     padding-top: 1px;
   }
 
   .titre-bleu {
     font-size: 18px;
-    font-family: "Kameron", serif;
-    color: #0cb1f1;
-    margin: 0;
     padding-top: 20px;
   }
 
   p {
     font-size: 14px;
-    font-family: "Merriweather", serif;
-    margin: 10px 0;
-    padding-top: 20px;
   }
 
   /*..................................................................................................*/
@@ -568,8 +526,6 @@ li {
   h3 {
     font-weight: bold;
     font-size: 16px;
-    font-family: "Merriweather", serif;
-    align-content: center;
   }
 
   /*.............................................................................*/
