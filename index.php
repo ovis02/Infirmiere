@@ -370,12 +370,15 @@
                 <a href="#" class="btn btn-perso appointment-button">Prendre rendez-vous en ligne</a>
               </div>
             </div>
-            <p class="mb-3" style="position: absolute; bottom: 10px ; left: 10px">
-              Copyright © 2023 M. Aowis Tous droits réservés
-            </p>
+  
           </div>
         </div>
       </div>
+      <div class="container-footer">
+  <p>
+    Copyright © 2023 M. Aowis Tous droits réservés
+  </p>
+</div>
     </footer>
       <script src="projet.js"></script>
   </body>

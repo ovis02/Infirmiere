@@ -1,39 +1,33 @@
 //Navigation bouton burger
 
 // Sélectionnez le logo burger bouton et la barre de navigation verticale
-const logoBurgerButton = document.getElementById("logo-burger-button");
-const verticalNavbar = document.getElementById("vertical-navbar");
+document.addEventListener("DOMContentLoaded", () => {
+  const logoBurgerButton = document.getElementById("logo-burger-button");
+  const verticalNavbar = document.getElementById("vertical-navbar");
+  const closeButton = document.getElementById("close-button");
 
-// Créez une variable pour suivre l'état de la barre de navigation
-let isNavbarVisible = false;
+  let isNavbarVisible = false;
 
-// Fonction pour ouvrir la barre de navigation
-function openNavbar() {
-  verticalNavbar.style.right = "0";
-  isNavbarVisible = true;
-}
-
-// Fonction pour fermer la barre de navigation
-function closeNavbar() {
-  verticalNavbar.style.right = "-200px";
-  isNavbarVisible = false;
-}
-
-// Sélectionnez le bouton "Fermer"
-const closeButton = document.getElementById("close-button");
-
-// Ajoutez un gestionnaire d'événement au bouton "Fermer"
-closeButton.addEventListener("click", () => {
-  closeNavbar();
-});
-
-// Ajoutez un gestionnaire d'événement au logo burger bouton
-logoBurgerButton.addEventListener("click", () => {
-  if (!isNavbarVisible) {
-    openNavbar();
-  } else {
-    closeNavbar();
+  function openNavbar() {
+    verticalNavbar.style.display = "flex"; // Affiche la navbar
+    isNavbarVisible = true;
   }
+
+  function closeNavbar() {
+    verticalNavbar.style.display = "none"; // Masque la navbar
+    isNavbarVisible = false;
+  }
+
+  closeButton.addEventListener("click", closeNavbar);
+
+  logoBurgerButton.addEventListener("click", (event) => {
+    event.preventDefault(); // Évitez le comportement par défaut du lien
+    if (!isNavbarVisible) {
+      openNavbar();
+    } else {
+      closeNavbar();
+    }
+  });
 });
 
 // Récupère le bouton "Contactez-moi" et le formulaire

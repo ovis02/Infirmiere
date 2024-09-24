@@ -84,12 +84,16 @@ li {
 }
 
 .vertical-navbar a {
+  display: none;
   color: #0cb1f1;
   text-decoration: none;
   font-size: 26px;
   padding: 10px;
 }
 
+#close-button {
+  display: none;
+}
 /*-----------------------------------------------------------------------------*/
 
 /*Fond d'ecran de la section principale*/
@@ -271,6 +275,14 @@ li {
   background-color: #0cb1f1; /* Couleur de fond du bouton footer*/
   color: #fff;
 }
+.container-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
 
 /*...........................................................................................*/
 
@@ -379,6 +391,15 @@ li {
   .burger-container {
     display: block;
     top: 50px;
+  }
+
+  .vertical-navbar {
+    display: none;
+  }
+
+  .vertical-navbar a,
+  #close-button {
+    display: block;
   }
   /* Style pour le cercle de la photo de profil*/
   .cercle-container {
